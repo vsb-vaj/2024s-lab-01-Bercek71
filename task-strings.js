@@ -8,7 +8,7 @@
 
 // Your code:
 const parametrize = (input) => {
-
+    return input.toLowerCase().split(' ').join('-');
 };
 
 // 2 =================================
@@ -19,6 +19,7 @@ const parametrize = (input) => {
 
 // Your code:
 const giveSentenceForPerson = (obj) => {
+    return `Hello ${obj.name} from ${obj.location}! It is nice to meet you! You look awesome for your ${obj.age}, young ${obj.position}!`;
 
 };
 
@@ -29,5 +30,9 @@ const giveSentenceForPerson = (obj) => {
 
 // Your code:
 const replace = (input) => {
-
+    return input.replace(/[aeio]/g, '*');
 };
+
+// console.log(parametrize("Javascript is the best"));
+// console.log(giveSentenceForPerson({name: "Obi-wan", position: "Jedi", age: 40, location: "Starwars universe"}));
+// console.log(replace("Hello Javascript"));

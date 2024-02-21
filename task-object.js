@@ -10,7 +10,11 @@
 
 // Your code:
 const volumeOfBox = (obj) => {
-
+    volume = 1;
+    Object.values(obj).forEach(value => {
+        volume *= value;
+    });
+    return volume;
 };
   
 // 2 ----
@@ -20,8 +24,11 @@ const volumeOfBox = (obj) => {
 
 // Your code:
 const personObject = (firstname, lastname, age) => {
-
-
+    return {
+        firstname, 
+        lastname, 
+        age, 
+        yearOfBirth: 2021 - age};
 };
 
 // 3 ----
@@ -35,6 +42,7 @@ const personObject = (firstname, lastname, age) => {
 
 //Your code:
 const getBudgets = (persons) => {
+    return persons.reduce((acc, person) => acc + person.budget, 0);
 
 };
 
@@ -46,6 +54,15 @@ const getBudgets = (persons) => {
 
 // Your code:
 const sortVehiclesByPrice = (vehicles) => {
-  
-
+    return vehicles.sort((a, b) => a.price - b.price);
 };
+
+
+// console.log(volumeOfBox({ width: 2, length: 5, height: 1 }));
+// console.log(personObject("Obi-wan", "Kenobi", "40"));
+// console.log(getBudgets([
+//     { name: "John", age: 21, budget: 23000 },
+//     { name: "Steve",  age: 32, budget: 40000 },
+//     { name: "Martin",  age: 16, budget: 2700 }
+// ]));
+// console.log(sortVehiclesByPrice([{name: "Executor Star Dreadnought", price: 999}, {name: "T-47 Airspeeder", price: 5}, {name: "AT-AT", price : 20}]));
