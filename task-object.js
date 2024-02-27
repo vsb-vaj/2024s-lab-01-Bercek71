@@ -28,7 +28,7 @@ const personObject = (firstname, lastname, age) => {
         firstname, 
         lastname, 
         age, 
-        yearOfBirth: 2021 - age};
+        yearOfBirth: new Date(Date.now()).getFullYear() - age};
 };
 
 // 3 ----
